@@ -14,3 +14,9 @@ Contributors:
   
   ・ Zoon-chan
   
+Patch history:
+
+  Patch 1 (28/5):
+     ・ Flexbox
+     ・ Logo header
+  
