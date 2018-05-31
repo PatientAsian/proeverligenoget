@@ -8,17 +8,21 @@ Basic Setup
   box-sizing: border-box;
 }
 
+html,
 body {
-  background-color: darkgrey;
   font-family: 'Raleway', sans-serif;
+  height: 100%;
   margin: 0;
   padding: 0;
+  width: 100%;
 }
 
 .bg {
   background-image: url(../img/bg.png);
   height: 100%;
-  position: absolute;
+  margin: 0;
+  padding: 0;
+  position: fixed;
   width: 100%;
   z-index: -1;
 }
@@ -34,37 +38,46 @@ a {
   text-decoration: none;
 }
 
-h1 {
-  
-}
+h1 {}
 
 h2 {
-  color: rgb(240,240,240);
+  color: rgb(240, 240, 240);
   font-size: 32px;
   font-weight: 400;
   margin-left: 1rem;
-  text-shadow: rgba(0, 0, 0,.8) 1px 0px 0px, rgba(0, 0, 0,.8) 0.540302px 0.841471px 0px, rgba(0, 0, 0,.8) -0.416147px 0.909297px 0px, rgba(0, 0, 0,.8) -0.989992px 0.14112px 0px, rgba(0, 0, 0,.8) -0.653644px -0.756802px 0px, rgba(0, 0, 0,.8) 0.283662px -0.958924px 0px, rgba(0, 0, 0,.8) 0.96017px -0.279415px 0px;
+  text-shadow: rgba(0, 0, 0, .8) 1px 0px 0px, rgba(0, 0, 0, .8) 0.540302px 0.841471px 0px, rgba(0, 0, 0, .8) -0.416147px 0.909297px 0px, rgba(0, 0, 0, .8) -0.989992px 0.14112px 0px, rgba(0, 0, 0, .8) -0.653644px -0.756802px 0px, rgba(0, 0, 0, .8) 0.283662px -0.958924px 0px, rgba(0, 0, 0, .8) 0.96017px -0.279415px 0px;
 }
 
-h3 {
-
-}
+h3 {}
 
 h4 {
-  
+  color: rgb(20, 20, 20);
+  font-size: 24px;
+  font-weight: 400;
+  margin: 0.5rem;
 }
 
-h5 {
-
-}
+h5 {}
 
 h6 {
-
+  color: rgb(200, 20, 200);
+  font-size: 18px;
+  font-weight: 400;
+  margin: 0.5rem;
 }
 
 hr {
   border: 1px outset #8c8b8b;
+  margin: 0;
+  padding: 0;
   width: 100vw;
+}
+
+main {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 100%;
+  min-height: 100%;
 }
 
 /*
@@ -73,16 +86,9 @@ Text
 ================================
 */
 
-.charname {
-  color: rgb(240,240,240);
-  text-shadow: #323232 0px 5px 2px;
-}
-
-hr.type_3 {
-  border: 0;
-  height: 25px;
-  background-image: url(../img/hr.png);
-  background-repeat: no-repeat;
+#footer {
+  height: auto;
+  width: 100%;
 }
 
 footer a {
@@ -95,8 +101,15 @@ footer a:hover {
   font-size: 11px;
 }
 
-footer span {
-  font-size: 11px;
+footer {
+  background: rgba(30, 98, 208, .5);
+  bottom: 0;
+  color: white;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  z-index: 1030;
+
 }
 
 /*
@@ -105,66 +118,71 @@ Flexbox
 ================================
 */
 
-#flexbox {
+.headerbox {
+  display: none;
+}
+
+.headerbox a {
+  display: flex;
+  flex: 1 0 20%;
+  justify-content: center;
+  margin: 5px;
+}
+
+.headerbox img {
+  margin: 0;
+  padding: 0;
+}
+
+.flexbox {
+  height: auto;
+  margin: 0;
+  padding: 0;
   width: 80%;
 }
 
 .flexcontainer {
   display: flex;
-  flex-flow: row wrap;
-  max-width: 60%;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: flex-start;
   margin: 1rem;
-
 }
 
 .flexmain {
+  background: rgba(30, 98, 208, .4);
   border: 1px solid black;
   border-radius: 1rem;
   display: flex;
-  flex-flow: column;
-  max-height: 50vh;
-  padding: 2rem;
+  flex-basis: 40%;
+  flex-flow: row wrap;
+  margin: 0.5rem;
+  padding: 1rem;
 }
 
 .flextext {
+  align-self: center;
   display: flex;
-  flex-direction: column;
   justify-content: center;
 }
 
-/* Grid system */
-@supports (display: grid) {
-  main {
-    max-width: 100%;
-    margin: 0;
-  }
-  article {
-    margin: 0;
-  }
-  .flexcontainer {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-gap: 1rem;
-  }
+/* Main Flex Grid */
+
+.flexcontainer {}
+
+.flexmain > h2 {
+  align-self: center;
+  margin: 1rem;
 }
 
-.flexmain {
-  background: rgba(30,98,208,.2);
-  display: flex;
-  flex-flow: row wrap;
-  border: 1px solid black;
-  border-radius: 1rem;
-  padding: 1rem;
-}
-.flexmain > h1 {
-  margin: 1rem 1rem 0;
-}
 .flexmain > ul {
   margin: 0 0 1rem;
 }
+
 .flexmain > p {
   margin: 0.25em 1rem 1rem;
 }
+
 .flexmain > img {
   order: -1;
   align-self: center;
@@ -193,27 +211,45 @@ Objects
 ================================
 */
 
+#headertext {}
+
+#logo {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin: 1rem;
+  margin-top: 0;
+}
+
+#logo img {
+  height: auto;
+  margin: 1rem;
+  margin-top: 1rem;
+  width: 35vw;
+}
+
 button {
   border-radius: 0.5rem;
   color: white;
-  padding: 0.5rem 1rem 0.5rem 1rem;
   background: #3D94F6;
   border: solid #337FED 1px;
-  border-radius: 20px;
+  border-radius: 20px;
   box-shadow: 1px 1px 5px 0px #000000;
-  color: #FFFFFF;
+  color: #FFFFFF;
   cursor: pointer;
   display: inline-block;
   font-size: 1.1rem;
   margin: 10px;
-  text-decoration: none;
+  padding: 0.5rem;
+  text-decoration: none;
   transition: .2s ease;
-  width: 90%;
+  width: 95%;
 }
 
 button:hover {
-   background: #1E62D0;
-   text-decoration: none;
+  background: #1E62D0;
+  text-decoration: none;
 }
 
 /*
@@ -223,27 +259,103 @@ Media Queries
 */
 
 /* For tablets: */
+
 @media only screen and (max-width: 1024px) {
-  
+
+  #logo {
+    display: flex;
+    justify-content: flex-start;
+    margin: 0.5rem;
+    margin-top: 0;
+  }
+
+  #logo img {
+    height: auto;
+    margin-top: 1rem;
+    width: 70%;
+  }
+
+  .headerbox {
+    /*
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    */
+  }
+
+  .flexbox {
+    width: 80%;
+  }
+
+  .flexcontainer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+    flex: 1 1 50%;
+  }
+
+  .flexmain {
+    flex: 1 1 48%;
+  }
+
 }
 
 /* For mobile phones: */
+
 @media only screen and (max-width: 768px) {
-  
+
+  .flexbox {
+    width: 100%;
+  }
+
+  .flexmain {
+    flex: 1 0 100%;
+    flex-flow: column;
+  }
+
 }
 
+/* For small mobile phones: */
 
+@media only screen and (max-width: 500px) {
 
+  #logo {
+    display: flex;
+    justify-content: center;
+    margin: 0.5rem;
+    margin-top: 0;
+  }
 
+  #logo img {
+    height: auto;
+    margin-top: 1rem;
+    width: 90%;
+  }
 
+  .flexbox {
+    width: 100%;
+  }
 
+  .flexcontainer {}
 
+  .flexmain {
+    flex: 1 0 50%;
+    max-width: x;
+  }
 
+  .button-area {
+    align-items: center;
+    display: flex;
+    flex-flow: row wrap;
+  }
 
+  .button-area a {
+    color: white;
+    text-decoration: none;
+    flex-basis: 70%;
+    text-align: center;
+  }
 
-
-
-
-
-
-
+}
