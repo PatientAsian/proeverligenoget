@@ -14,7 +14,7 @@
   <link rel="shortcut icon" id="favicon" href="favicon.png">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <!-- Fonts -->
-  <link href='http://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900|Montserrat:400,700' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900' rel='stylesheet' type='text/css'>
   <!-- CSS -->
   <link href="css/normalize.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
@@ -23,18 +23,28 @@
 </head>
 
 <body>
-
-  <div class="bg"></div>
-
-  <header id="logo"><img src="img/logo.png" alt="Køge UNG Logo"></header>
-  <div id="flexbox">
-    <main class="flexcontainer">
+<div class="bg"></div>
+  <!-- Header -->
+<main>
+  <header id="logo">
+    <img src="img/logo.png" alt="Køge UNG Logo">
+  </header>
+  
+  <div class="headerbox">
+        <a href="#"><img src="img/uddsm.png" alt="Uddbtn"></a>
+        <a href="#"><img src="img/oekosm.png" alt="Økobtn"></a>
+        <a href="#"><img src="img/hjemsm.png" alt="Hjembtn"></a>
+        <a href="#"><img src="img/rejsesm.png" alt="Rejsebtn"></a>
+  </div>
+  
+  <div class="flexbox">
+    <div class="flexcontainer">
 
       <article class="flexmain">
         <div class="flextext">
           <h2>Uddannelse & Job</h2>
         </div>
-        <img src="img/udd.png">
+        <img src="img/udd.png" alt="Uddannelse">
         <div class="button-area">
           <a href="#"><button>Søg uddannelse</button></a>
           <a href="#"><button>Søg job</button></a>
@@ -47,7 +57,7 @@
         <div class="flextext">
           <h2>SU & Økonomi</h2>
         </div>
-        <img src="img/oeko.png">
+        <img src="img/oeko.png" alt="Økonomi">
         <div class="button-area">
           <a href="#"><button>Søg SU</button></a>
           <a href="#"><button>Tillæg</button></a>
@@ -60,7 +70,7 @@
         <div class="flextext">
           <h2>Bolig & Flytning</h2>
         </div>
-        <img src="img/hjem.png">
+        <img src="img/hjem.png" alt="Flytning & Hjem">
         <div class="button-area">
           <a href="#"><button>Meld flytning</button></a>
           <a href="#"><button>Boligstøtte</button></a>
@@ -73,7 +83,7 @@
         <div class="flextext">
           <h2>Pas & Rejse</h2>
         </div>
-        <img src="img/rejse.png">
+        <img src="img/rejse.png" alt="Rejse">
         <div class="button-area">
           <a href="#"><button>Lav / Forny pas</button></a>
           <a href="#"><button>EU-Sundhedskort</button></a>
@@ -82,19 +92,15 @@
         </div>
       </article>
 
-    </main>
+    </div>
   </div>
-  <!--
-    <img src="img/udd.png">
-    
-    
-    
-    <div class="flexbuttons">
-      <a href="#" class="btn">Søg SU</a>
-      <a href="#" class="btn">Søg SU</a>
-      <a href="#" class="btn">Søg SU</a>
-      <a href="#" class="btn">Søg SU</a>
-    </div> -->
+
+<div id="footer">
+  <footer>
+    <p>&copy; Prøverligenoget Productions Inc.</p>
+  </footer>
+</div>
+</main>
 </body>
 
 </html>
