@@ -19,4 +19,14 @@ Patch history:
   Patch 1 (28/5):
      ・ Flexbox
      ・ Logo header
+     
+  Responsive Patch (31/5):
+     ・ General alignment and bugfixing
+     ・ Responsive v1
+  
+  Beta (1/6):
+     ・ Footer
+     ・ Header
+     ・ Responsive v2
+     ・ SoMe Icons
   
