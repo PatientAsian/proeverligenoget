@@ -18,7 +18,7 @@ body {
 }
 
 .bg {
-  background-image: url(../img/bg.png);
+  background-image: url(../img/bg1.png);
   height: 100%;
   margin: 0;
   padding: 0;
@@ -38,9 +38,7 @@ a {
   text-decoration: none;
 }
 
-h1 {}
-
-h2 {
+h1 {
   color: rgb(240, 240, 240);
   font-size: 32px;
   font-weight: 400;
@@ -48,7 +46,15 @@ h2 {
   text-shadow: rgba(0, 0, 0, .8) 1px 0px 0px, rgba(0, 0, 0, .8) 0.540302px 0.841471px 0px, rgba(0, 0, 0, .8) -0.416147px 0.909297px 0px, rgba(0, 0, 0, .8) -0.989992px 0.14112px 0px, rgba(0, 0, 0, .8) -0.653644px -0.756802px 0px, rgba(0, 0, 0, .8) 0.283662px -0.958924px 0px, rgba(0, 0, 0, .8) 0.96017px -0.279415px 0px;
 }
 
-h3 {}
+h2 {}
+
+h3 {
+  color: rgb(240, 240, 240);
+  font-size: 30px;
+  font-weight: 400;
+  margin: 0 0 1rem 0;
+  text-shadow: rgba(0, 0, 0, .8) 1px 0px 0px, rgba(0, 0, 0, .8) 0.540302px 0.841471px 0px, rgba(0, 0, 0, .8) -0.416147px 0.909297px 0px, rgba(0, 0, 0, .8) -0.989992px 0.14112px 0px, rgba(0, 0, 0, .8) -0.653644px -0.756802px 0px, rgba(0, 0, 0, .8) 0.283662px -0.958924px 0px, rgba(0, 0, 0, .8) 0.96017px -0.279415px 0px;
+}
 
 h4 {
   color: rgb(20, 20, 20);
@@ -60,10 +66,11 @@ h4 {
 h5 {}
 
 h6 {
-  color: rgb(200, 20, 200);
-  font-size: 18px;
-  font-weight: 400;
-  margin: 0.5rem;
+  color: rgb(240, 240, 240);
+  font-size: 16px;
+  font-weight: 300;
+  margin: 0 auto;
+  margin-bottom: 1rem;
 }
 
 hr {
@@ -73,43 +80,71 @@ hr {
   width: 100vw;
 }
 
+header {
+  background: rgba(60, 60, 60, .8);
+}
+
 main {
   display: grid;
   grid-template-rows: auto 1fr auto;
   grid-template-columns: 100%;
-  min-height: 100%;
-}
-
-/*
-================================
-Text
-================================
-*/
-
-#footer {
-  height: auto;
-  width: 100%;
-}
-
-footer a {
-  color: #333;
-  font-size: 11px;
-}
-
-footer a:hover {
-  color: #979797;
-  font-size: 11px;
+  min-height: 100vh;
 }
 
 footer {
   background: rgba(30, 98, 208, .5);
-  bottom: 0;
   color: white;
+  font-size: 10px;
   display: flex;
   justify-content: center;
+  padding: 0.5rem;
   width: 100%;
   z-index: 1030;
+}
 
+footer p:hover {
+  font-size: 10px;
+  text-shadow: 0px 0px 6px rgba(255, 255, 255, 0.7);
+}
+
+/*
+================================
+IDs
+================================
+*/
+
+#headertext {
+  align-self: center;
+}
+
+#headertext h6 {
+  font-size: 16px;
+  margin: 0 auto;
+}
+
+#logo {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-top: 0;
+}
+
+#logo img {
+  height: auto;
+  margin: 1rem;
+  margin-top: 1rem;
+  width: 25vw;
+}
+
+#footer {
+  height: auto;
+  position: sticky;
+  width: 100%;
+}
+
+#footer p {
+  align-self: center;
 }
 
 /*
@@ -135,6 +170,8 @@ Flexbox
 }
 
 .flexbox {
+  align-items: center;
+  display: flex;
   height: auto;
   margin: 0;
   padding: 0;
@@ -150,7 +187,7 @@ Flexbox
 }
 
 .flexmain {
-  background: rgba(30, 98, 208, .4);
+  background: rgba(30, 98, 208, .5);
   border: 1px solid black;
   border-radius: 1rem;
   display: flex;
@@ -165,10 +202,6 @@ Flexbox
   display: flex;
   justify-content: center;
 }
-
-/* Main Flex Grid */
-
-.flexcontainer {}
 
 .flexmain > h2 {
   align-self: center;
@@ -211,22 +244,29 @@ Objects
 ================================
 */
 
-#headertext {}
-
-#logo {
-  display: flex;
-  flex-flow: row wrap;
-  align-items: flex-start;
+.icon-barm {
+  align-items: center;
+  flex: 1 1 0;
   justify-content: flex-start;
-  margin: 1rem;
-  margin-top: 0;
+  margin: 0 auto;
+  z-index: 1;
 }
 
-#logo img {
-  height: auto;
-  margin: 1rem;
-  margin-top: 1rem;
-  width: 35vw;
+.icon-barm a {
+  border-radius: 50%;
+  color: lightcyan;
+  display: inline-block;
+  font-size: 24px;
+  margin: 0 1rem 0 1rem;
+  padding: 8px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.fa-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 button {
@@ -254,6 +294,55 @@ button:hover {
 
 /*
 ================================
+SoMe Button Styling
+================================
+*/
+
+.facebook {
+  background: rgb(41, 62, 106);
+  color: white;
+}
+
+.facebook:hover {
+  background: #3B5998;
+  color: white;
+}
+
+.youtube {
+  background: #820000;
+  color: white;
+}
+
+.youtube:hover {
+  background: #bb0000;
+  color: white;
+}
+
+.instagram {
+  background: #8f324a;
+  color: white;
+}
+
+.instagram:hover {
+  background: #cd486b;
+  color: white;
+}
+
+.fa {
+  font-size: 30px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.fa-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*
+================================
 Media Queries
 ================================
 */
@@ -265,16 +354,16 @@ Media Queries
   #logo {
     display: flex;
     justify-content: flex-start;
-    margin: 0.5rem;
     margin-top: 0;
   }
 
   #logo img {
     height: auto;
     margin-top: 1rem;
-    width: 70%;
+    width: 50vw;
   }
 
+  /* Top icons */
   .headerbox {
     /*
     display: flex;
@@ -300,9 +389,23 @@ Media Queries
     flex: 1 1 48%;
   }
 
+  #headertext {
+    margin: 0 0.5rem 0.5rem 0.5rem;
+  }
+
+  #headertext h3 {
+    font-size: 24px;
+    margin-bottom: 0.5rem;
+  }
+
+  #headertext h6 {
+    font-size: 16px;
+    margin: 0 auto;
+  }
+
 }
 
-/* For mobile phones: */
+/* For tablets and big phones: */
 
 @media only screen and (max-width: 768px) {
 
@@ -315,30 +418,64 @@ Media Queries
     flex-flow: column;
   }
 
+  #headertext {
+    align-self: flex-start;
+    margin: 0 0.5rem 0.5rem 0.5rem;
+  }
+
+  #headertext h3 {
+    font-size: 20px;
+    margin-bottom: 0.5rem;
+  }
+
+  #headertext h6 {
+    font-size: 14px;
+    margin: 0 auto;
+  }
+
 }
 
 /* For small mobile phones: */
 
 @media only screen and (max-width: 500px) {
+  .bg {
+    height: 150%;
+    margin-top: -50%;
+    padding: 0;
+    position: fixed;
+    width: 100vw;
+    z-index: -1;
+  }
 
   #logo {
     display: flex;
     justify-content: center;
-    margin: 0.5rem;
-    margin-top: 0;
   }
 
   #logo img {
     height: auto;
-    margin-top: 1rem;
     width: 90%;
+  }
+
+  #headertext {
+    align-self: flex-start;
+    margin: 0 0.5rem 0.5rem 0.5rem;
+  }
+
+  #headertext h3 {
+    font-size: 17px;
+    margin-bottom: 0.5rem;
+  }
+
+  #headertext h6 {
+    font-size: 12px;
+    font-style: italic;
+    margin: 0 auto;
   }
 
   .flexbox {
     width: 100%;
   }
-
-  .flexcontainer {}
 
   .flexmain {
     flex: 1 0 50%;
