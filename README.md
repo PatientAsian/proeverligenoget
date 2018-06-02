@@ -37,4 +37,12 @@ Patch history:
      ・ Responsive v2
      
      ・ SoMe Icons
+     
+  Pre-release (2/6):
+  
+     ・ Aside w. help and infographic
+     
+     ・ Floating Action Button Prototype
+     
+     ・ General bugfixing and styling
   
