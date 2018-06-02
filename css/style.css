@@ -40,27 +40,28 @@ a {
 
 h1 {
   color: rgb(240, 240, 240);
-  font-size: 32px;
-  font-weight: 400;
-  margin-left: 1rem;
-  text-shadow: rgba(0, 0, 0, .8) 1px 0px 0px, rgba(0, 0, 0, .8) 0.540302px 0.841471px 0px, rgba(0, 0, 0, .8) -0.416147px 0.909297px 0px, rgba(0, 0, 0, .8) -0.989992px 0.14112px 0px, rgba(0, 0, 0, .8) -0.653644px -0.756802px 0px, rgba(0, 0, 0, .8) 0.283662px -0.958924px 0px, rgba(0, 0, 0, .8) 0.96017px -0.279415px 0px;
-}
-
-h2 {}
-
-h3 {
-  color: rgb(240, 240, 240);
   font-size: 30px;
   font-weight: 400;
   margin: 0 0 1rem 0;
   text-shadow: rgba(0, 0, 0, .8) 1px 0px 0px, rgba(0, 0, 0, .8) 0.540302px 0.841471px 0px, rgba(0, 0, 0, .8) -0.416147px 0.909297px 0px, rgba(0, 0, 0, .8) -0.989992px 0.14112px 0px, rgba(0, 0, 0, .8) -0.653644px -0.756802px 0px, rgba(0, 0, 0, .8) 0.283662px -0.958924px 0px, rgba(0, 0, 0, .8) 0.96017px -0.279415px 0px;
 }
 
+h2 {
+  color: rgb(240, 240, 240);
+  font-size: 32px;
+  font-weight: 500;
+  margin-left: 1rem;
+  text-shadow: rgba(0, 0, 0, .8) 1px 0px 0px, rgba(0, 0, 0, .8) 0.540302px 0.841471px 0px, rgba(0, 0, 0, .8) -0.416147px 0.909297px 0px, rgba(0, 0, 0, .8) -0.989992px 0.14112px 0px, rgba(0, 0, 0, .8) -0.653644px -0.756802px 0px, rgba(0, 0, 0, .8) 0.283662px -0.958924px 0px, rgba(0, 0, 0, .8) 0.96017px -0.279415px 0px;
+}
+
+h3 {}
+
 h4 {
-  color: rgb(20, 20, 20);
-  font-size: 24px;
+  color: rgb(240, 240, 240);
+  font-size: 26px;
   font-weight: 400;
   margin: 0.5rem;
+  text-shadow: rgba(0, 0, 0, .8) 1px 0px 0px, rgba(0, 0, 0, .8) 0.540302px 0.841471px 0px, rgba(0, 0, 0, .8) -0.416147px 0.909297px 0px, rgba(0, 0, 0, .8) -0.989992px 0.14112px 0px, rgba(0, 0, 0, .8) -0.653644px -0.756802px 0px, rgba(0, 0, 0, .8) 0.283662px -0.958924px 0px, rgba(0, 0, 0, .8) 0.96017px -0.279415px 0px;
 }
 
 h5 {}
@@ -91,8 +92,13 @@ main {
   min-height: 100vh;
 }
 
+
+ul li {
+  list-style-type: none;
+}
+
 footer {
-  background: rgba(30, 98, 208, .5);
+  background: rgba(30, 98, 208, .4);
   color: white;
   font-size: 10px;
   display: flex;
@@ -137,6 +143,43 @@ IDs
   width: 25vw;
 }
 
+.wrapper {
+  height: 100%;
+}
+
+#sidenav {
+  display: flex;
+  align-items: center;
+  flex-flow: column;
+  float: right;
+  height: 100%;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+  background-color: rgba(60, 60, 60, .4);
+  max-width: 15%;
+
+}
+
+#myButton {
+  background-color: #3D94F6;
+  font-size: 16px;
+  margin: 0 auto;
+  padding: 0.5rem 2rem 0.5rem 2rem;
+}
+
+
+#videoWrap {
+  display: none;
+}
+
+#videoWrap a {
+  align-self: center;
+  display: flex;
+  font-family: 'Raleway', sans-serif;
+  font-size: 24px;
+}
+
 #footer {
   height: auto;
   position: sticky;
@@ -172,17 +215,18 @@ Flexbox
 .flexbox {
   align-items: center;
   display: flex;
-  height: auto;
+  height: 100%;
+  justify-content: center;
   margin: 0;
   padding: 0;
-  width: 80%;
+  width: 85%;
 }
 
 .flexcontainer {
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
-  justify-content: flex-start;
+  justify-content: center;
   margin: 1rem;
 }
 
@@ -225,17 +269,67 @@ Flexbox
   align-items: center;
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-between;
-  margin: 10px auto;
-  max-width: 90%;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 95%;
 }
 
 .button-area a {
+  border-radius: 0.5rem;
   color: white;
-  text-decoration: none;
-  flex: 1 1 0;
-  flex-basis: 50%;
+  background: #3D94F6;
+  border: solid #337FED 1px;
+  border-radius: 20px;
+  box-shadow: 1px 1px 5px 0px #000000;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  flex: 1 0 45%;
+  font-size: 1.1rem;
+  margin: 0.5rem;
+  padding: 0.5rem;
   text-align: center;
+  text-decoration: none;
+  transition: .2s ease;
+  width: 100%;
+}
+
+.button-area a:hover {
+  background: #1E62D0;
+  text-decoration: none;
+}
+
+.flexhelpwrapper {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+.flexhelp {
+  background: rgba(60, 60, 60, .5);
+  display: flex;
+  flex-flow: row wrap;
+  margin: 1rem;
+  padding: 1rem;
+}
+
+.flexhelp li {
+  display: flex;
+  flex-flow: row wrap;
+  flex: 1 0 0;
+  justify-content: center;
+  margin: 0.5rem;
+}
+
+.flexhelp li a {
+  align-self: center;
+  display: inline-block;
+  margin-left: 1;
+}
+
+.flexhelp li i {
+  display: inline-block;
+
 }
 
 /*
@@ -263,10 +357,8 @@ Objects
   transition: all 0.3s ease;
 }
 
-.fa-box {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.footertext-m {
+  display: none;
 }
 
 button {
@@ -280,23 +372,31 @@ button {
   cursor: pointer;
   display: inline-block;
   font-size: 1.1rem;
-  margin: 10px;
-  padding: 0.5rem;
+  text-align: center;
   text-decoration: none;
   transition: .2s ease;
-  width: 95%;
-}
-
-button:hover {
-  background: #1E62D0;
-  text-decoration: none;
 }
 
 /*
 ================================
-SoMe Button Styling
+FA Icon Styling
 ================================
 */
+
+.fa.fa-id-card,
+.fa.fa-money-check-alt,
+.fa.fa-truck-moving {
+  color: rgba(77, 165, 255, 1);
+  font-size: 36px;
+  text-decoration: none;
+  transition: .2s ease;
+}
+
+.fa.fa-id-card:hover,
+.fa.fa-money-check-alt:hover,
+.fa.fa-truck-moving:hover {
+  color: rgb(20, 118, 235);
+}
 
 .facebook {
   background: rgb(41, 62, 106);
@@ -328,17 +428,15 @@ SoMe Button Styling
   color: white;
 }
 
-.fa {
-  font-size: 30px;
+.fab {
+  font-size: 24px;
   width: 30px;
   text-align: center;
   text-decoration: none;
 }
 
-.fa-box {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.fabwrap {
+  display: none;
 }
 
 /*
@@ -350,6 +448,10 @@ Media Queries
 /* For tablets: */
 
 @media only screen and (max-width: 1024px) {
+
+  #sidenav {
+    display: none;
+  }
 
   #logo {
     display: flex;
@@ -363,18 +465,8 @@ Media Queries
     width: 50vw;
   }
 
-  /* Top icons */
-  .headerbox {
-    /*
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 100%;
-    */
-  }
-
   .flexbox {
-    width: 80%;
+    width: 100%;
   }
 
   .flexcontainer {
@@ -382,7 +474,7 @@ Media Queries
     flex-wrap: wrap;
     align-items: flex-start;
     justify-content: center;
-    flex: 1 1 50%;
+    flex: 1 1 100%;
   }
 
   .flexmain {
@@ -393,7 +485,7 @@ Media Queries
     margin: 0 0.5rem 0.5rem 0.5rem;
   }
 
-  #headertext h3 {
+  #headertext h1 {
     font-size: 24px;
     margin-bottom: 0.5rem;
   }
@@ -403,6 +495,156 @@ Media Queries
     margin: 0 auto;
   }
 
+  /*
+================================
+Floating Action Button (Original CSS by Dhanish)
+
+Copyright (c) 2018 by Dhanish (https://codepen.io/dhanishgajjar/pen/NyeqvL)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+================================
+*/
+  .fabwrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    --l: 3.5em;
+  }
+
+  .customBox {
+    display: none;
+  }
+
+  .customBox + label {
+    cursor: pointer;
+    position: absolute;
+    right: 1em;
+    bottom: 1em;
+    background-color: rgb(30, 98, 208);
+    height: var(--l);
+    width: var(--l);
+    border-radius: 50%;
+    z-index: 2;
+  }
+
+  .customBox + label:before,
+  .customBox + label:after {
+    position: absolute;
+    content: '';
+    height: calc(var(--l) / 2);
+    width: .25em;
+    background-color: #fff;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    border-radius: .5em;
+    transition: all .25s;
+  }
+
+  .customBox + label:before {
+    height: calc(var(--l) / 2);
+    width: .25em;
+  }
+
+  .customBox + label:after {
+    width: calc(var(--l) / 2);
+    height: .25em;
+  }
+
+  .customBox:checked + label:before {
+    transform: rotatez(-45deg);
+  }
+
+  .customBox:checked + label:after {
+    transform: rotatez(-45deg);
+  }
+
+  .one,
+  .two,
+  .three {
+    cursor: pointer;
+    position: absolute;
+    right: 1em;
+    bottom: 1em;
+    padding: 1em;
+    border-radius: 50%;
+    opacity: 0;
+    z-index: 1;
+    transform: rotateZ(90deg);
+    font-size: 1rem;
+    color: #fff;
+    transition-property: all;
+    transition-duration: .35s;
+    transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    text-align: center;
+  }
+  
+  .one,
+  .two,
+  .three, span {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+  }
+  
+  .one,
+  .fa.fa-id-card {
+    color: white;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: .2s ease;
+  }
+
+  .two,
+  .fa.fa-money-check-alt {
+    color: white;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: .2s ease;
+  }
+
+  .three,
+  .fa.fa-truck-moving {
+    color: white;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: .2s ease;
+  }
+
+
+  .customBox:checked ~ .one,
+  .customBox:checked ~ .two,
+  .customBox:checked ~ .three {
+    opacity: 1;
+  }
+
+  .customBox:checked ~ .one {
+    background-color: rgb(50, 180, 80);
+    transform: translateX(-7em);
+  }
+
+  .customBox:checked ~ .two {
+    background-color: rgb(50, 180, 80);
+    transform: translateX(-5.5em) translateY(-5.5em);
+  }
+
+  .customBox:checked ~ .three {
+    background-color: rgb(50, 180, 80);
+    transform: translateY(-7em);
+  }
+
+  .customBox:checked ~ .one:hover,
+  .customBox:checked ~ .two:hover,
+  .customBox:checked ~ .three:hover {
+    opacity: .9;
+  }
+
+  /* End FAB */
 }
 
 /* For tablets and big phones: */
@@ -423,7 +665,7 @@ Media Queries
     margin: 0 0.5rem 0.5rem 0.5rem;
   }
 
-  #headertext h3 {
+  #headertext h1 {
     font-size: 20px;
     margin-bottom: 0.5rem;
   }
@@ -462,15 +704,13 @@ Media Queries
     margin: 0 0.5rem 0.5rem 0.5rem;
   }
 
-  #headertext h3 {
-    font-size: 17px;
+  #headertext h1 {
+    font-size: 12px;
     margin-bottom: 0.5rem;
   }
 
   #headertext h6 {
-    font-size: 12px;
-    font-style: italic;
-    margin: 0 auto;
+    display: none;
   }
 
   .flexbox {
@@ -493,6 +733,28 @@ Media Queries
     text-decoration: none;
     flex-basis: 70%;
     text-align: center;
+  }
+
+  .icon-barm {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin: 0 auto;
+    z-index: 1;
+  }
+
+  .icon-barm a {
+    clear: both;
+  }
+
+  .footertext-m {
+    display: flex;
+    justify-content: center;
+    margin: 0.7rem;
+  }
+
+  .footertext {
+    display: none;
   }
 
 }
