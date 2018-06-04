@@ -11,7 +11,7 @@ Basic Setup
 html,
 body {
   font-family: 'Raleway', sans-serif;
-  height: 100%;
+  min-height: 100%;
   margin: 0;
   padding: 0;
   width: 100%;
@@ -64,7 +64,12 @@ h4 {
   text-shadow: rgba(0, 0, 0, .8) 1px 0px 0px, rgba(0, 0, 0, .8) 0.540302px 0.841471px 0px, rgba(0, 0, 0, .8) -0.416147px 0.909297px 0px, rgba(0, 0, 0, .8) -0.989992px 0.14112px 0px, rgba(0, 0, 0, .8) -0.653644px -0.756802px 0px, rgba(0, 0, 0, .8) 0.283662px -0.958924px 0px, rgba(0, 0, 0, .8) 0.96017px -0.279415px 0px;
 }
 
-h5 {}
+h5 {
+  color: rgb(240, 240, 240);
+  font-size: 16px;
+  font-weight: 300;
+  margin: 0.5rem;
+}
 
 h6 {
   color: rgb(240, 240, 240);
@@ -97,6 +102,22 @@ ul li {
   list-style-type: none;
 }
 
+button {
+  border-radius: 0.5rem;
+  color: white;
+  background: #3D94F6;
+  border: solid #337FED 1px;
+  border-radius: 20px;
+  box-shadow: 1px 1px 5px 0px #000000;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1.1rem;
+  text-align: center;
+  text-decoration: none;
+  transition: .2s ease;
+}
+
 footer {
   background: rgba(30, 98, 208, .4);
   color: white;
@@ -108,9 +129,8 @@ footer {
   z-index: 1030;
 }
 
-footer p:hover {
-  font-size: 10px;
-  text-shadow: 0px 0px 6px rgba(255, 255, 255, 0.7);
+.footertext:hover {
+  text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.7);
 }
 
 /*
@@ -121,6 +141,7 @@ IDs
 
 #headertext {
   align-self: center;
+  margin: 0 5rem 0.5rem 0.5rem;
 }
 
 #headertext h6 {
@@ -158,26 +179,10 @@ IDs
   z-index: 1;
   background-color: rgba(60, 60, 60, .4);
   max-width: 15%;
-
 }
 
-#myButton {
-  background-color: #3D94F6;
-  font-size: 16px;
-  margin: 0 auto;
-  padding: 0.5rem 2rem 0.5rem 2rem;
-}
-
-
-#videoWrap {
-  display: none;
-}
-
-#videoWrap a {
-  align-self: center;
-  display: flex;
-  font-family: 'Raleway', sans-serif;
-  font-size: 24px;
+#sidenav h4 {
+  text-align: center;
 }
 
 #footer {
@@ -235,7 +240,7 @@ Flexbox
   border: 1px solid black;
   border-radius: 1rem;
   display: flex;
-  flex-basis: 40%;
+  flex: 1 0 40%;
   flex-flow: row wrap;
   margin: 0.5rem;
   padding: 1rem;
@@ -313,6 +318,10 @@ Flexbox
   padding: 1rem;
 }
 
+.flexhelp h4 {
+  margin: 0 auto;
+}
+
 .flexhelp li {
   display: flex;
   flex-flow: row wrap;
@@ -329,7 +338,24 @@ Flexbox
 
 .flexhelp li i {
   display: inline-block;
+}
 
+.flexhelp2 {
+  align-content: center;
+  align-items: center;
+  align-self: center;
+  justify-content: center;
+  background: rgba(60, 60, 60, .5);
+  display: flex;
+  flex-flow: column nowrap;
+  margin: 1rem;
+  padding: 1rem;
+}
+
+.flexhelp2 li a {
+  align-items: center;
+  justify-content: center;
+  margin: 1rem;
 }
 
 /*
@@ -337,6 +363,18 @@ Flexbox
 Objects
 ================================
 */
+
+.sidelinks {
+  display: flex;
+}
+
+.sidelinks img {
+  border-radius: 50%;
+  height: auto;
+  opacity: .75;
+  transition: .25s ease;
+  width: 50%;
+}
 
 .icon-barm {
   align-items: center;
@@ -357,24 +395,40 @@ Objects
   transition: all 0.3s ease;
 }
 
+.footertext {
+  margin-left: 0.5rem;
+}
+
+.footertext img {
+  align-self: center;
+  justify-content: center;
+  display: flex;
+  height: auto;
+  width: 2rem;
+}
+
 .footertext-m {
   display: none;
 }
 
-button {
-  border-radius: 0.5rem;
-  color: white;
-  background: #3D94F6;
-  border: solid #337FED 1px;
-  border-radius: 20px;
-  box-shadow: 1px 1px 5px 0px #000000;
-  color: #FFFFFF;
-  cursor: pointer;
-  display: inline-block;
-  font-size: 1.1rem;
-  text-align: center;
-  text-decoration: none;
-  transition: .2s ease;
+.flexhelp-m {
+  display: none;
+}
+
+/*
+================================
+Link effects
+================================
+*/
+
+.sidelinks img:hover {
+  opacity: 1;
+  -webkit-box-shadow: 0px 0px 15px 5px rgba(77, 165, 255, .5);
+  box-shadow: 0px 0px 15px 10px rgba(77, 165, 255, .5);
+}
+
+.sidelinks img:active {
+  mix-blend-mode: saturation;
 }
 
 /*
@@ -439,15 +493,32 @@ FA Icon Styling
   display: none;
 }
 
+
 /*
 ================================
 Media Queries
 ================================
 */
 
+@media only screen and (max-width: 1168px) {
+
+  /* Fit header logo and text */
+  #headertext {
+    margin: 0 0.5rem 0.5rem 0.5rem;
+  }
+
+  #logo img {
+    margin: .5rem;
+  }
+}
+
 /* For tablets: */
 
 @media only screen and (max-width: 1024px) {
+
+  body {
+    overflow-x: hidden;
+  }
 
   #sidenav {
     display: none;
@@ -494,6 +565,21 @@ Media Queries
     font-size: 16px;
     margin: 0 auto;
   }
+  
+.flexhelp-m {
+  background: rgba(60, 60, 60, .5);
+  display: flex;
+  flex-flow: row nowrap;
+  margin: 0;
+  padding: 1rem;
+  width: 100vw;
+}
+
+.flexhelp-m li a {
+  align-items: center;
+  justify-content: space-around;
+  margin: 0 auto;
+}
 
   /*
 ================================
@@ -509,10 +595,25 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 ================================
 */
   .fabwrap {
+    align-items: center;
     display: flex;
     justify-content: center;
-    align-items: center;
     --l: 3.5em;
+  }
+
+  .bg-m {
+    background: rgba(60, 60, 60, .75);
+    position: fixed;
+    right: 1em;
+    bottom: 1em;
+    padding: 1em;
+    height: 12rem;
+    width: 11rem;
+    opacity: 0;
+    z-index: 1;
+    transition-property: all;
+    transition-duration: .2s;
+    transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
   }
 
   .customBox {
@@ -521,10 +622,10 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
   .customBox + label {
     cursor: pointer;
-    position: absolute;
+    position: fixed;
     right: 1em;
     bottom: 1em;
-    background-color: rgb(30, 98, 208);
+    background-color: rgba(30, 98, 208, .5);
     height: var(--l);
     width: var(--l);
     border-radius: 50%;
@@ -569,7 +670,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   .two,
   .three {
     cursor: pointer;
-    position: absolute;
+    position: fixed;
     right: 1em;
     bottom: 1em;
     padding: 1em;
@@ -584,14 +685,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
     text-align: center;
   }
-  
-  .one,
-  .two,
-  .three, span {
-    font-family: 'Raleway', sans-serif;
-    font-weight: 500;
-  }
-  
+
   .one,
   .fa.fa-id-card {
     color: white;
@@ -616,26 +710,70 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     transition: .2s ease;
   }
 
+  .customBox:checked + label {
+    background: rgba(60, 60, 60, 1);
+  }
 
   .customBox:checked ~ .one,
   .customBox:checked ~ .two,
-  .customBox:checked ~ .three {
+  .customBox:checked ~ .three,
+  .customBox:checked ~ .bg-m {
     opacity: 1;
   }
 
   .customBox:checked ~ .one {
-    background-color: rgb(50, 180, 80);
-    transform: translateX(-7em);
+    background-color: rgb(200, 60, 60);
+    transform: translateY(-12.5em);
+    transition-delay: .2s;
   }
 
   .customBox:checked ~ .two {
-    background-color: rgb(50, 180, 80);
-    transform: translateX(-5.5em) translateY(-5.5em);
+    background-color: rgb(60, 200, 60);
+    transform: translateY(-8.5em);
+    transition-delay: .15s;
   }
 
   .customBox:checked ~ .three {
-    background-color: rgb(50, 180, 80);
-    transform: translateY(-7em);
+    background-color: rgb(60, 60, 200);
+    transform: translateY(-4.5em);
+    transition-delay: .1s;
+  }
+
+  .customBox:checked ~ .bg-m {
+    transform: translateX(.3em) translateY(-4em);
+  }
+
+  .customBox:checked ~ .one p {
+    font-family: 'Raleway', sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    position: absolute;
+    text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4),
+    0px 8px 13px rgba(0, 0, 0, 0.1),
+    0px 18px 23px rgba(0, 0, 0, 0.1);
+    transform: translateX(-3em) translateY(-2em);
+  }
+
+  .customBox:checked ~ .two p {
+    font-family: 'Raleway', sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    position: absolute;
+    text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4),
+    0px 8px 13px rgba(0, 0, 0, 0.1),
+    0px 18px 23px rgba(0, 0, 0, 0.1);
+    transform: translateX(-2.5em) translateY(-1.8em);
+  }
+
+  .customBox:checked ~ .three p {
+    font-family: 'Raleway', sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    position: absolute;
+    text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4),
+    0px 8px 13px rgba(0, 0, 0, 0.1),
+    0px 18px 23px rgba(0, 0, 0, 0.1);
+    transform: translateX(-5em) translateY(-2em);
   }
 
   .customBox:checked ~ .one:hover,
@@ -749,8 +887,22 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
   .footertext-m {
     display: flex;
+    flex-flow: column wrap;
     justify-content: center;
     margin: 0.7rem;
+  }
+  
+  .footertext-m h5 {
+    font-size: 14px;
+    margin: 0.5rem;
+  }
+  
+  .footertext-m img {
+    align-self: center;
+    justify-content: center;
+    display: flex;
+    height: auto;
+    width: 3rem;
   }
 
   .footertext {

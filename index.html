@@ -39,7 +39,7 @@
       <img src="img/logoblue.png" alt="Køge UNG Logo">
       <div id="headertext">
         <h1>Velkommen til Køge UNG: Din online borgerservice for unge.</h1>
-        <h6>Her kan du benytte dig af vores selvbetjening samt finde hjælp til få nogen til at gøre noget :)</h6>
+        <h6><i>Her kan du bl.a. forny dit pas eller søge SU uden at skulle tage ned til kommunen...</i></h6>
       </div>
       <div></div>
     </header>
@@ -47,17 +47,29 @@
     <div class="wrapper">
       <!-- Navigation -->
       <aside id="sidenav">
-        <h4>Brug for hjælp?</h4>
+       
         <nav>
           <ul class="flexhelp">
+            <h4>Brug for hjælp?</h4>
             <li>
-              <i class="fa fa-id-card" data-featherlight="img/pasinfo.png"></i><a data-featherlight="img/pasinfo.png">Pas</a>
+              <i class="fa fa-id-card" data-featherlight="img/PCinfografik.png"></i><a data-featherlight="img/PCinfografik2.png">Pas</a>
             </li>
             <li>
               <i class="fa fa-money-check-alt" data-featherlight="img/pasinfo.png"></i><a data-featherlight="img/pasinfo.png">SU</a>
             </li>
             <li>
               <i class="fa fa-truck-moving" data-featherlight="img/pasinfo.png"></i><a data-featherlight="img/pasinfo.png">Flytning</a>
+            </li>
+          </ul>
+          <ul class="flexhelp2">
+            <li>
+              <a class="sidelinks" href="http://www.borger.dk"><img src="img/borgericon.png"></a>
+            </li>
+            <li>
+              <a class="sidelinks" href="http://www.e-boks.dk"><img src="img/eboksicon.png"></a>
+            </li>
+            <li>
+              <a class="sidelinks" href="http://www.skat.dk"><img src="img/skaticon.png"></a>
             </li>
           </ul>
         </nav>
@@ -125,27 +137,45 @@
 
     <div class="fabwrap">
       <input id="customBox" class="customBox" type="checkbox" />
-      <label for="customBox"></label>
-      <div class="one fa fa-id-card"><br><span>Pas</span></div>
-      <div class="two fa fa-money-check-alt"><br><span>SU</span></div>
-      <div class="three fa fa-truck-moving"><br><span>Flyt</span></div>
+      <label for="customBox" class="fas fa-question"></label>
+      <div class="bg-m"></div>
+      <div class="one fa fa-id-card" data-featherlight="img/pasinfo.png">
+        <p>Pas</p>
+      </div>
+      <div class="two fa fa-money-check-alt" data-featherlight="img/PCinfografik.png">
+        <p>SU</p>
+      </div>
+      <div class="three fa fa-truck-moving" data-featherlight="img/PCinfografik.png">
+        <p>Flytning</p>
+      </div>
     </div>
 
     <div id="footer">
+              <ul class="flexhelp-m">
+            <li>
+              <a class="sidelinks" href="http://www.borger.dk"><img src="img/borgericon.png"></a>
+            </li>
+            <li>
+              <a class="sidelinks" href="http://www.e-boks.dk"><img src="img/eboksicon.png"></a>
+            </li>
+            <li>
+              <a class="sidelinks" href="http://www.skat.dk"><img src="img/skaticon.png"></a>
+            </li>
+          </ul>
       <footer>
         <div class="icon-barm">
           <a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
           <a href="#" class="youtube"><i class="fab fa-youtube"></i></a>
           <a href="#" class="instagram"><i class="fab fa-instagram"></i></a>
-          <p class="footertext-m">&copy; Prøverligenoget Productions Inc.</p>
+          <div class="footertext-m"><img src="img/koegelogoblk.png"><h5>&copy; Køge Kommune</h5></div>
         </div>
-        <p class="footertext">&copy; Prøverligenoget Productions Inc.</p>
+        <div class="footertext"><a href="http://www.koege.dk"><img src="img/koegelogoblk.png"></a></div>
+        <p class="footertext">&copy; Køge Kommune</p>
       </footer>
     </div>
   </main>
   <!-- Featherlight.js -->
   <script src="//cdn.rawgit.com/noelboss/featherlight/1.7.13/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
-  <script src="js/fademenu.js" type="text/javascript" charset="utf-8"></script>
 </body>
 
 </html>
