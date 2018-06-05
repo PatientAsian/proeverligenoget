@@ -18,7 +18,8 @@ body {
 }
 
 .bg {
-  background-image: url(../img/bg1.png);
+  background-image: url(../img/bg3.jpg);
+  filter: blur(0.7px);
   height: 100%;
   margin: 0;
   padding: 0;
@@ -77,6 +78,7 @@ h6 {
   font-weight: 300;
   margin: 0 auto;
   margin-bottom: 1rem;
+  text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.8);
 }
 
 hr {
@@ -87,7 +89,8 @@ hr {
 }
 
 header {
-  background: rgba(60, 60, 60, .8);
+
+  width: 85%;
 }
 
 main {
@@ -119,7 +122,7 @@ button {
 }
 
 footer {
-  background: rgba(30, 98, 208, .4);
+  background: rgba(30, 30, 30, .7);
   color: white;
   font-size: 10px;
   display: flex;
@@ -141,12 +144,16 @@ IDs
 
 #headertext {
   align-self: center;
-  margin: 0 5rem 0.5rem 0.5rem;
+  margin: 0.5rem 0.5rem 0.5rem 1.5rem;
 }
 
 #headertext h6 {
   font-size: 16px;
   margin: 0 auto;
+}
+
+#brm {
+  display: none;
 }
 
 #logo {
@@ -173,11 +180,13 @@ IDs
   align-items: center;
   flex-flow: column;
   float: right;
-  height: 100%;
+  height: 93.8vh;
+  right: 0;
+  top: 0;
   justify-content: center;
-  position: relative;
+  position: absolute;
   z-index: 1;
-  background-color: rgba(60, 60, 60, .4);
+  background-color: rgba(60, 60, 60, .6);
   max-width: 15%;
 }
 
@@ -189,6 +198,7 @@ IDs
   height: auto;
   position: sticky;
   width: 100%;
+  z-index: 1030;
 }
 
 #footer p {
@@ -311,7 +321,7 @@ Flexbox
 }
 
 .flexhelp {
-  background: rgba(60, 60, 60, .5);
+  background: rgba(30, 30, 30, .4);
   display: flex;
   flex-flow: row wrap;
   margin: 1rem;
@@ -345,7 +355,7 @@ Flexbox
   align-items: center;
   align-self: center;
   justify-content: center;
-  background: rgba(60, 60, 60, .5);
+  background: rgba(30, 30, 30, .4);
   display: flex;
   flex-flow: column nowrap;
   margin: 1rem;
@@ -421,6 +431,12 @@ Link effects
 ================================
 */
 
+.flexhelp-m img:hover {
+  opacity: 1;
+  -webkit-box-shadow: 0px 0px 15px 5px rgba(77, 165, 255, .5);
+  box-shadow: 0px 0px 15px 10px rgba(77, 165, 255, .5);
+}
+
 .sidelinks img:hover {
   opacity: 1;
   -webkit-box-shadow: 0px 0px 15px 5px rgba(77, 165, 255, .5);
@@ -493,6 +509,9 @@ FA Icon Styling
   display: none;
 }
 
+.headerbig {
+  display: none;
+}
 
 /*
 ================================
@@ -500,16 +519,38 @@ Media Queries
 ================================
 */
 
+/* iPad Pro BG */
+
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) {}
+
+.bg {
+  background-size: cover;
+}
+
 @media only screen and (max-width: 1168px) {
 
   /* Fit header logo and text */
   #headertext {
-    margin: 0 0.5rem 0.5rem 0.5rem;
+    margin: 0 0 0 1.5rem;
   }
 
   #logo img {
     margin: .5rem;
+    width: 40%;
   }
+
+  #sidenav {
+    height: 100%;
+  }
+
+  .headerbig {
+    display: block;
+  }
+
+  .headersm {
+    display: none;
+  }
+
 }
 
 /* For tablets: */
@@ -532,6 +573,7 @@ Media Queries
 
   #logo img {
     height: auto;
+    margin-left: 1rem;
     margin-top: 1rem;
     width: 50vw;
   }
@@ -553,7 +595,7 @@ Media Queries
   }
 
   #headertext {
-    margin: 0 0.5rem 0.5rem 0.5rem;
+    margin: 0.5rem 0 0.5rem 1.5rem;
   }
 
   #headertext h1 {
@@ -565,21 +607,25 @@ Media Queries
     font-size: 16px;
     margin: 0 auto;
   }
-  
-.flexhelp-m {
-  background: rgba(60, 60, 60, .5);
-  display: flex;
-  flex-flow: row nowrap;
-  margin: 0;
-  padding: 1rem;
-  width: 100vw;
-}
 
-.flexhelp-m li a {
-  align-items: center;
-  justify-content: space-around;
-  margin: 0 auto;
-}
+  .flexhelp-m {
+    background: rgba(30, 30, 30, .5);
+    display: flex;
+    flex-flow: row nowrap;
+    margin: 0;
+    padding: .75rem;
+    width: 100%;
+  }
+
+  .flexhelp-m img {
+    max-width: 35%;
+  }
+
+  .flexhelp-m li a {
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+  }
 
   /*
 ================================
@@ -625,7 +671,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     position: fixed;
     right: 1em;
     bottom: 1em;
-    background-color: rgba(30, 98, 208, .5);
+    background-color: rgba(30, 180, 30, .8);
     height: var(--l);
     width: var(--l);
     border-radius: 50%;
@@ -800,7 +846,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
   #headertext {
     align-self: flex-start;
-    margin: 0 0.5rem 0.5rem 0.5rem;
+    margin: 0.5rem 0.5rem 0.5rem 1rem;
   }
 
   #headertext h1 {
@@ -820,7 +866,6 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 @media only screen and (max-width: 500px) {
   .bg {
     height: 150%;
-    margin-top: -50%;
     padding: 0;
     position: fixed;
     width: 100vw;
@@ -830,6 +875,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   #logo {
     display: flex;
     justify-content: center;
+    width: 100%;
   }
 
   #logo img {
@@ -838,17 +884,24 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   }
 
   #headertext {
-    align-self: flex-start;
-    margin: 0 0.5rem 0.5rem 0.5rem;
+    margin: 0 auto;
+    padding: .25rem;
   }
 
   #headertext h1 {
-    font-size: 12px;
+    font-size: 14px;
     margin-bottom: 0.5rem;
+    font-weight: 300;
+    margin: 0 auto;
+    text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.8);
   }
 
   #headertext h6 {
     display: none;
+  }
+
+  #brm {
+    display: block;
   }
 
   .flexbox {
@@ -891,12 +944,12 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     justify-content: center;
     margin: 0.7rem;
   }
-  
+
   .footertext-m h5 {
     font-size: 14px;
     margin: 0.5rem;
   }
-  
+
   .footertext-m img {
     align-self: center;
     justify-content: center;
