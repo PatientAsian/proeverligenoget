@@ -46,3 +46,10 @@ Patch history:
      
      ・ General bugfixing and styling
   
+    Final Release (5/6):
+  
+     ・ Background changed
+     
+     ・ FAB fixed
+     
+     ・ Last touches on bugfixing and styling
