@@ -45,8 +45,8 @@ Patch history:
      ・ Floating Action Button Prototype
      
      ・ General bugfixing and styling
-  
-    Final Release (5/6):
+
+  Final Release (5/6):
   
      ・ Background changed
      
